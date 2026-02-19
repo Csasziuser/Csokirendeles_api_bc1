@@ -12,7 +12,10 @@ class ChocolateController extends Controller
      */
     public function index()
     {
-        //
+        $chocolate = Chocolate::all();
+        return response()->json(
+            $chocolate, 200, options:JSON_UNESCAPED_UNICODE
+        );
     }
 
     /**
